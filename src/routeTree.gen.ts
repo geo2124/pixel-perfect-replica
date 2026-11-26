@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArchitectureRouteImport } from './routes/architecture'
+import { Route as AssessmentRouteImport } from './routes/assessment'
+import { Route as BusinessRouteImport } from './routes/business'
+import { Route as DataRouteImport } from './routes/data'
+import { Route as DecisionsRouteImport } from './routes/decisions'
+import { Route as IntelligenceRouteImport } from './routes/intelligence'
+import { Route as KnowledgeRouteImport } from './routes/knowledge'
+import { Route as LabRouteImport } from './routes/lab'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as StrategyRouteImport } from './routes/strategy'
+import { Route as SystemsRouteImport } from './routes/systems'
+import { Route as DimensionsPillarRouteImport } from './routes/dimensions.$pillar'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArchitectureRoute = ArchitectureRouteImport.update({
+  id: '/architecture',
+  path: '/architecture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssessmentRoute = AssessmentRouteImport.update({
+  id: '/assessment',
+  path: '/assessment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessRoute = BusinessRouteImport.update({
+  id: '/business',
+  path: '/business',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataRoute = DataRouteImport.update({
+  id: '/data',
+  path: '/data',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DecisionsRoute = DecisionsRouteImport.update({
+  id: '/decisions',
+  path: '/decisions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntelligenceRoute = IntelligenceRouteImport.update({
+  id: '/intelligence',
+  path: '/intelligence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeRoute = KnowledgeRouteImport.update({
+  id: '/knowledge',
+  path: '/knowledge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LabRoute = LabRouteImport.update({
+  id: '/lab',
+  path: '/lab',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StrategyRoute = StrategyRouteImport.update({
+  id: '/strategy',
+  path: '/strategy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SystemsRoute = SystemsRouteImport.update({
+  id: '/systems',
+  path: '/systems',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DimensionsPillarRoute = DimensionsPillarRouteImport.update({
+  id: '/dimensions/$pillar',
+  path: '/dimensions/$pillar',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/architecture': typeof ArchitectureRoute
+  '/assessment': typeof AssessmentRoute
+  '/business': typeof BusinessRoute
+  '/data': typeof DataRoute
+  '/decisions': typeof DecisionsRoute
+  '/intelligence': typeof IntelligenceRoute
+  '/knowledge': typeof KnowledgeRoute
+  '/lab': typeof LabRoute
+  '/settings': typeof SettingsRoute
+  '/strategy': typeof StrategyRoute
+  '/systems': typeof SystemsRoute
+  '/dimensions/$pillar': typeof DimensionsPillarRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/architecture': typeof ArchitectureRoute
+  '/assessment': typeof AssessmentRoute
+  '/business': typeof BusinessRoute
+  '/data': typeof DataRoute
+  '/decisions': typeof DecisionsRoute
+  '/intelligence': typeof IntelligenceRoute
+  '/knowledge': typeof KnowledgeRoute
+  '/lab': typeof LabRoute
+  '/settings': typeof SettingsRoute
+  '/strategy': typeof StrategyRoute
+  '/systems': typeof SystemsRoute
+  '/dimensions/$pillar': typeof DimensionsPillarRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/architecture': typeof ArchitectureRoute
+  '/assessment': typeof AssessmentRoute
+  '/business': typeof BusinessRoute
+  '/data': typeof DataRoute
+  '/decisions': typeof DecisionsRoute
+  '/intelligence': typeof IntelligenceRoute
+  '/knowledge': typeof KnowledgeRoute
+  '/lab': typeof LabRoute
+  '/settings': typeof SettingsRoute
+  '/strategy': typeof StrategyRoute
+  '/systems': typeof SystemsRoute
+  '/dimensions/$pillar': typeof DimensionsPillarRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/architecture'
+    | '/assessment'
+    | '/business'
+    | '/data'
+    | '/decisions'
+    | '/intelligence'
+    | '/knowledge'
+    | '/lab'
+    | '/settings'
+    | '/strategy'
+    | '/systems'
+    | '/dimensions/$pillar'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/architecture'
+    | '/assessment'
+    | '/business'
+    | '/data'
+    | '/decisions'
+    | '/intelligence'
+    | '/knowledge'
+    | '/lab'
+    | '/settings'
+    | '/strategy'
+    | '/systems'
+    | '/dimensions/$pillar'
+  id:
+    | '__root__'
+    | '/'
+    | '/architecture'
+    | '/assessment'
+    | '/business'
+    | '/data'
+    | '/decisions'
+    | '/intelligence'
+    | '/knowledge'
+    | '/lab'
+    | '/settings'
+    | '/strategy'
+    | '/systems'
+    | '/dimensions/$pillar'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArchitectureRoute: typeof ArchitectureRoute
+  AssessmentRoute: typeof AssessmentRoute
+  BusinessRoute: typeof BusinessRoute
+  DataRoute: typeof DataRoute
+  DecisionsRoute: typeof DecisionsRoute
+  IntelligenceRoute: typeof IntelligenceRoute
+  KnowledgeRoute: typeof KnowledgeRoute
+  LabRoute: typeof LabRoute
+  SettingsRoute: typeof SettingsRoute
+  StrategyRoute: typeof StrategyRoute
+  SystemsRoute: typeof SystemsRoute
+  DimensionsPillarRoute: typeof DimensionsPillarRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/architecture': {
+      id: '/architecture'
+      path: '/architecture'
+      fullPath: '/architecture'
+      preLoaderRoute: typeof ArchitectureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assessment': {
+      id: '/assessment'
+      path: '/assessment'
+      fullPath: '/assessment'
+      preLoaderRoute: typeof AssessmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business': {
+      id: '/business'
+      path: '/business'
+      fullPath: '/business'
+      preLoaderRoute: typeof BusinessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data': {
+      id: '/data'
+      path: '/data'
+      fullPath: '/data'
+      preLoaderRoute: typeof DataRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/decisions': {
+      id: '/decisions'
+      path: '/decisions'
+      fullPath: '/decisions'
+      preLoaderRoute: typeof DecisionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/intelligence': {
+      id: '/intelligence'
+      path: '/intelligence'
+      fullPath: '/intelligence'
+      preLoaderRoute: typeof IntelligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge': {
+      id: '/knowledge'
+      path: '/knowledge'
+      fullPath: '/knowledge'
+      preLoaderRoute: typeof KnowledgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lab': {
+      id: '/lab'
+      path: '/lab'
+      fullPath: '/lab'
+      preLoaderRoute: typeof LabRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/strategy': {
+      id: '/strategy'
+      path: '/strategy'
+      fullPath: '/strategy'
+      preLoaderRoute: typeof StrategyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/systems': {
+      id: '/systems'
+      path: '/systems'
+      fullPath: '/systems'
+      preLoaderRoute: typeof SystemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dimensions/$pillar': {
+      id: '/dimensions/$pillar'
+      path: '/dimensions/$pillar'
+      fullPath: '/dimensions/$pillar'
+      preLoaderRoute: typeof DimensionsPillarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArchitectureRoute: ArchitectureRoute,
+  AssessmentRoute: AssessmentRoute,
+  BusinessRoute: BusinessRoute,
+  DataRoute: DataRoute,
+  DecisionsRoute: DecisionsRoute,
+  IntelligenceRoute: IntelligenceRoute,
+  KnowledgeRoute: KnowledgeRoute,
+  LabRoute: LabRoute,
+  SettingsRoute: SettingsRoute,
+  StrategyRoute: StrategyRoute,
+  SystemsRoute: SystemsRoute,
+  DimensionsPillarRoute: DimensionsPillarRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

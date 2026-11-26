@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Prototype architecture
+- Keep business entities and financial calculations in browser-safe model modules, separate from presentation, so every analysis uses the same source of truth.
+- Use a shared React provider with hydration-safe local storage for this explicitly frontend-only prototype; never imply server persistence, real authentication or live integrations.
+- Give each product module its own TanStack content route inside the persistent root workspace shell, so analytical sessions remain open across navigation.
+- Label simulated services and elementary scenario calculations honestly; PDF reports and file parsing run only in browser-triggered actions.
